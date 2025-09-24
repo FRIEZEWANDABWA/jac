@@ -6,6 +6,6 @@ services:
     startCommand: "python main.py"
     envVars:
       - key: PYTHON_VERSION
-        value: 3.11.0
+        value: 3.11
       - key: PORT
         value: 8000
