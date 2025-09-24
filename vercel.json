@@ -3,16 +3,5 @@
   "outputDirectory": "web/.next",
   "devCommand": "cd web && npm run dev",
   "installCommand": "cd web && npm install",
-  "framework": "nextjs",
-  "functions": {
-    "services/api/main.py": {
-      "runtime": "python3.9"
-    }
-  },
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/services/api/main.py"
-    }
-  ]
+  "framework": "nextjs"
 }
