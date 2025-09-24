@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: digital-bastion-api
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "cd services/api && python main.py"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: PORT
+        value: 8000

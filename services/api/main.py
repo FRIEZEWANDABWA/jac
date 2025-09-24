@@ -17,10 +17,15 @@ except ImportError:
 
 app = FastAPI(title="Digital Bastion API", version="1.0.0")
 
-# CORS middleware for Next.js frontend
+# CORS middleware for Next.js frontend (Vercel + local)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://localhost:3001"],
+    allow_origins=[
+        "http://localhost:3000", 
+        "http://localhost:3001",
+        "https://*.vercel.app",
+        "https://digitalbastion.vercel.app"  # Replace with your domain
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
